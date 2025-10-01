@@ -12,8 +12,8 @@ class LoginPage < SitePrism::Page
         loginButton.click
     end
 
-    def checkInvalidUserMessageShow
-        expect(invalidUser.text).to eql "Insira um nome de usuário válido"
+    def checkInvalidUserMessageShow(message)
+        expect(invalidUser.text).to eql (message)
     end
 
     def checkInvalid(message)

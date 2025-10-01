@@ -15,7 +15,7 @@ Quando('ele digitar o nome de usuario invalido') do
 end
 
 Entao('deve mostrar erro de usuario invalido') do
-  login.checkInvalidUserMessageShow
+  login.checkInvalidUserMessageShow("Insira um nome de usuário válido")
 end
 
 Quando('ele digitar a senha invalida') do
@@ -32,4 +32,12 @@ end
 
 Entao('deve mostrar erro de senha menor de seis caracteres') do
   login.checkInvalid("A senha deve ter no mínimo 6 caracteres.")
+end
+
+Quando('ele deixar nome e senha vazios') do
+  login.userLogin('', '')
+end
+
+Entao('deve mostrar erro de insercao de email ou telefone') do
+  login.checkInvalidUserMessageShow("Insira um e-mail ou telefone.")
 end

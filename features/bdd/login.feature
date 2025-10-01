@@ -9,6 +9,10 @@ Cenario: Login com sucesso
 Quando ele digitar as credenciais validas
 Entao deve acessar o site com sucesso
 
+Cenario: Login com nome e senha vazios
+Quando ele deixar nome e senha vazios
+Entao deve mostrar erro de insercao de email ou telefone
+
 Cenario: Login com nome de usuario invalido
 Quando ele digitar o nome de usuario invalido
 Entao deve mostrar erro de usuario invalido
