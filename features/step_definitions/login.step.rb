@@ -1,5 +1,5 @@
 Dado('que o usuario queira se logar') do
-    login.load
+  login.load
 end
 
 Quando('ele digitar as credenciais validas') do
@@ -23,5 +23,13 @@ Quando('ele digitar a senha invalida') do
 end
 
 Entao('deve mostrar erro de senha invalido') do
-  login.checkPasswordInvalid
+  login.checkInvalid("E-mail ou senha incorreta. Tente novamente ou crie uma conta .")
+end
+
+Quando('ele digitar a senha menor de seis caracteres') do
+  login.userLogin(CREDENTIAL[:user][:email], CREDENTIAL[:invalidUser][:passwordMinus6Characters])
+end
+
+Entao('deve mostrar erro de senha menor de seis caracteres') do
+  login.checkInvalid("A senha deve ter no mínimo 6 caracteres.")
 end

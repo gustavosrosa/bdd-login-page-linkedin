@@ -16,3 +16,7 @@ Entao deve mostrar erro de usuario invalido
 Cenario: Login com senha invalida
 Quando ele digitar a senha invalida
 Entao deve mostrar erro de senha invalido
+
+Cenario: Login com senha menor de seis caracteres
+Quando ele digitar a senha menor de seis caracteres
+Entao deve mostrar erro de senha menor de seis caracteres

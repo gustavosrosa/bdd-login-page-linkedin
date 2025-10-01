@@ -16,7 +16,7 @@ class LoginPage < SitePrism::Page
         expect(invalidUser.text).to eql "Insira um nome de usuário válido"
     end
 
-    def checkPasswordInvalid
-        expect(emailOrPasswordInvalid.text).to eql "E-mail ou senha incorreta. Tente novamente ou crie uma conta ."
+    def checkInvalid(message)
+        expect(emailOrPasswordInvalid.text).to eql (message)
     end
 end
