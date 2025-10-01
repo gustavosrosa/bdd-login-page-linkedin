@@ -1,8 +1,14 @@
 #language: pt
 
-Funcionalidade: Login com sucesso
+Funcionalidade: Login
+
+Contexto:
+    Dado que o usuario queira se logar
 
 Cenario: Login com sucesso
-Dado que o usuario queira se logar
 Quando ele digitar as credenciais validas
 Entao deve acessar o site com sucesso
+
+Cenario: Login com nome de usuario invalido
+Quando ele digitar o nome de usuario invalido
+Entao deve mostrar erro de usuario invalido
