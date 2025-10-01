@@ -4,7 +4,7 @@ class LoginPage < SitePrism::Page
     element :loginButton, :xpath, "//button[@type='submit']"
 
     def userLogin
-        emailField.set "Seu usuário"
+        emailField.set "Seu email"
         passwordField.set "Sua senha"
         loginButton.click
     end
