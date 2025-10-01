@@ -7,8 +7,10 @@ require 'rspec'
 require 'rspec/expectations'
 include RSpec::Matchers
 
+Env = ENV['URL']
+
 Capybara.configure do |config|
     config.default_driver = :selenium_chrome
-    config.app_host = 'https://www.linkedin.com/login/pt?fromSignIn=true&trk=guest_homepage-basic_nav-header-signin'
+    config.app_host = Env
     config.default_max_wait_time = 5
 end
